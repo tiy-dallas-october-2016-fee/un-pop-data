@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>UN Population Statistics</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1><a href="/">UN Population Statistics</a></h1>
+        <nav>
+          <ul>
+            <li><a href="/afganistan">Afganistan</a></li>
+            <li><a href="/cambodia">Cambodia</a></li>
+            <li><a href="/vietnam">Viet Nam</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <h2><%= title %></h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Population</th>
+          </tr>
+        </thead>
+        <tbody>
+        <% for(var i=0; i < statistics.length; i++) {%>
+           <tr>
+             <td><%= statistics[i].year %></td>
+             <td><%= statistics[i].population %></td>
+           </tr>
+        <% } %>
+        </tbody>
+      </table>
+
+    </div>
+
+  </body>
+
+</html>
