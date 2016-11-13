@@ -40,7 +40,8 @@ app.get('/vietnam', function(req, res) {
 
 });
 
+var port = process.env.PORT || 2845;
 
-app.listen(2845, function() {
-  console.log('listening on port 2845');
+app.listen(port, function() {
+  console.log('listening on port ', port);
 });
