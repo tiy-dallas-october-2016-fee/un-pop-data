@@ -40,6 +40,14 @@ app.get('/vietnam', function(req, res) {
 
 });
 
+app.get('/api/vietnam', function(req, res) {
+
+  csv('viet-nam-population-un.csv', function(data) {
+    res.send(data);
+  });
+
+});
+
 var port = process.env.PORT || 2845;
 
 app.listen(port, function() {

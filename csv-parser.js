@@ -3,12 +3,10 @@ var fs = require('fs');
 
 function stringToObjectArray(fileString) {
   var rows = fileString.split('\n');
-  console.log('length', rows);
 
   var popArray = [];
 
   for (var i = 1; i < rows.length; i++) {
-    console.log('row', rows[i]);
     var row = rows[i];
     var rowValues = row.split(',')
 
@@ -28,8 +26,6 @@ function stringToObjectArray(fileString) {
       population: populationValue
     });
   }
-
-  console.log('pop array', popArray);
 
   return popArray;
 }
